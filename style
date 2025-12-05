@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+}
+
+header {
+    background: #0055aa;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     position: sticky;   /* Makes navbar stick */
+    top: 0;             /* Stick to top */
+    z-index: 999;       /* Stay above other content */
+}
+
+header .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 30%;
+    padding-bottom: 15px;
+    color: white;
+    background: url('assets/images/cover.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #00cc66;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 18px;
+    animation: jiggle 3s infinite; /* Added animation */
+}
+
+
+/* Scroll indicator container on right side */
+.scroll-indicator {
+    position: absolute;
+    top: 80%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Scroll down text */
+.scroll-down-text {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 8px;
+    writing-mode: vertical-rl; /* Rotate text vertically */
+    text-orientation: upright;
+    animation: bounceText 2s infinite;
+}
+
+/* Scroll arrow */
+.scroll-arrow {
+    color: white;
+    font-size: 28px;
+    animation: bounceArrow 2s infinite;
+}
+
+.services {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+
+.contact,
+.gallery,
+.about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.gallery {
+    padding: 50px 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+footer {
+    background: #0055aa;
+    padding: 12px;
+    color: white;
+    text-align: center;
+}
+
+/* Hover effect for service and gallery boxes */
+.box:hover,
+.gallery-grid img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Background light shades for sections */
+#home { background-color: #f0f8ff; }       /* Light blue */
+#services { background-color: #fef9f0; }   /* Light cream */
+#gallery { background-color: #f9f0f9; }    /* Light pink/purple */
+#about { background-color: #f0fff0; }      /* Light green */
+#contact { background-color: #fffaf0; }    /* Light orange */
+
+
+/* Fancy Back-to-top button */
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #0055aa, #00cc66);
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+}
+
+#back-to-top:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+
+
+/* Bounce animation for text */
+@keyframes bounceText {
+    0%, 100% { transform: translateY(0); opacity: 0.8; }
+    50% { transform: translateY(6px); opacity: 1; }
+}
+
+/* Bounce animation for arrow */
+@keyframes bounceArrow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+
+/* Jiggle animation */
+@keyframes jiggle {
+    0%, 100% { transform: rotate(0deg); }
+    15% { transform: rotate(-5deg); }
+    30% { transform: rotate(5deg); }
+    45% { transform: rotate(-5deg); }
+    60% { transform: rotate(5deg); }
+    75% { transform: rotate(-2deg); }
+    90% { transform: rotate(2deg); }
+}
