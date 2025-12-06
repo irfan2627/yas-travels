@@ -42,7 +42,7 @@
         <div class="service-list">
 
             <div class="box">
-                <img src="assets/images/flight1.jpg" alt="Flight Tickets">
+                <img src="assets/images/flight6.png" alt="Flight Tickets">
                 <h3>✈️ Flight Tickets</h3>
                 <p>Domestic & International air ticket booking.</p>
             </div>
@@ -66,13 +66,26 @@
             </div>
 
             <div class="box">
+                <img src="assets/images/bus1.png" alt="Bus Tickets">
+                <h3>🚌 Bus Tickets</h3>
+                <p>Book domestic and intercity bus tickets easily.</p>
+            </div>
+
+            <div class="box">
+                <img src="assets/images/train1.png" alt="Train Tickets">
+                <h3>🚆 Train Tickets</h3>
+                <p>Book train tickets quickly and hassle-free.</p>
+            </div>
+
+
+            <div class="box">
                 <img src="assets/images/hotel1.jpg" alt="Hotel Booking">
                 <h3>🏨 Hotel Booking</h3>
                 <p>Budget to premium hotel reservations worldwide.</p>
             </div>
 
             <div class="box">
-                <img src="assets/images/online1.jpg" alt="Online Services">
+                <img src="assets/images/online2.png" alt="Online Services">
                 <h3>🌐 Online Services</h3>
                 <p>PAN, PCC, Passport, Insurance & more.</p>
             </div>
@@ -114,7 +127,7 @@
             <a href="tel:+919447371235">+91 9447 371 235</a>
         </p>
 
-        <p><strong>Email:</strong> <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+        <p><strong>Email:</strong> <a href="yastravelspkd@gmail.com">yastravelspkd@gmail.com</a></p>
 
         <p><strong>WhatsApp:</strong>
             <a href="https://wa.me/919746919235">+91 9746 919 235</a> ,
@@ -126,11 +139,11 @@
         </p>
 
         <p><strong>Location:</strong>
-            Nemmara, Palakkad, Kerala
+            Palakkad, Kerala - India
         </p>
 
         <p><strong>Hours:</strong>
-            Mon – Sun : 9 AM – 9 PM
+            Mon – Sun : 8 AM – 10 PM
         </p>
     </section>
 
@@ -142,9 +155,9 @@
     <div id="back-to-top" onclick="scrollToTop()">↑</div>
 
     <!-- Floating WhatsApp button -->
-<a href="https://wa.me/919072919235" target="_blank" id="floating-whatsapp">
-    💬 Book Now
-</a>
+    <a href="https://wa.me/919072919235" target="_blank" id="floating-whatsapp">
+        💬 Book Now
+    </a>
 
 
     <script>
@@ -213,7 +226,7 @@
         let particlesArray;
 
         class Particle {
-            constructor(x, y, size, speedX, speedY){
+            constructor(x, y, size, speedX, speedY) {
                 this.x = x;
                 this.y = y;
                 this.size = size;
@@ -223,8 +236,8 @@
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
-                if(this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX;
-                if(this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY;
+                if (this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX;
+                if (this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY;
             }
             draw() {
                 ctx.fillStyle = "rgba(255,255,255,0.5)";
@@ -234,9 +247,9 @@
             }
         }
 
-        function initParticles(){
+        function initParticles() {
             particlesArray = [];
-            for(let i = 0; i < 50; i++){
+            for (let i = 0; i < 50; i++) {
                 let size = Math.random() * 3 + 1;
                 let x = Math.random() * canvas.width;
                 let y = Math.random() * canvas.height;
@@ -246,8 +259,8 @@
             }
         }
 
-        function animateParticles(){
-            ctx.clearRect(0,0,canvas.width,canvas.height);
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             particlesArray.forEach(p => {
                 p.update();
                 p.draw();
@@ -267,9 +280,9 @@
         // Fade-in on scroll
         const faders = document.querySelectorAll('.service-list .box, .gallery-grid img');
         const appearOptions = { threshold: 0.1 };
-        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+        const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
             entries.forEach(entry => {
-                if(entry.isIntersecting){
+                if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     appearOnScroll.unobserve(entry.target);
                 }
