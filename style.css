@@ -11,9 +11,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-     position: sticky;   /* Makes navbar stick */
-    top: 0;             /* Stick to top */
-    z-index: 999;       /* Stay above other content */
+    position: sticky;
+    /* Makes navbar stick */
+    top: 0;
+    /* Stick to top */
+    z-index: 999;
+    /* Stay above other content */
 }
 
 header .logo {
@@ -48,14 +51,15 @@ header nav a {
     border-radius: 6px;
     text-decoration: none;
     font-size: 18px;
-    animation: jiggle 3s infinite; /* Added animation */
+    animation: jiggle 3s infinite;
+    /* Added animation */
 }
 
 
 /* Scroll indicator container on right side */
 .scroll-indicator {
     position: absolute;
-    top: 80%;
+    top: 70%;
     right: 20px;
     transform: translateY(-50%);
     display: flex;
@@ -69,7 +73,8 @@ header nav a {
     color: white;
     font-size: 16px;
     margin-bottom: 8px;
-    writing-mode: vertical-rl; /* Rotate text vertically */
+    writing-mode: vertical-rl;
+    /* Rotate text vertically */
     text-orientation: upright;
     animation: bounceText 2s infinite;
 }
@@ -153,11 +158,31 @@ footer {
 }
 
 /* Background light shades for sections */
-#home { background-color: #f0f8ff; }       /* Light blue */
-#services { background-color: #fef9f0; }   /* Light cream */
-#gallery { background-color: #f9f0f9; }    /* Light pink/purple */
-#about { background-color: #f0fff0; }      /* Light green */
-#contact { background-color: #fffaf0; }    /* Light orange */
+#home {
+    background-color: #f0f8ff;
+}
+
+/* Light blue */
+#services {
+    background-color: #fef9f0;
+}
+
+/* Light cream */
+#gallery {
+    background-color: #f9f0f9;
+}
+
+/* Light pink/purple */
+#about {
+    background-color: #f0fff0;
+}
+
+/* Light green */
+#contact {
+    background-color: #fffaf0;
+}
+
+/* Light orange */
 
 
 /* Fancy Back-to-top button */
@@ -176,7 +201,7 @@ footer {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -184,33 +209,71 @@ footer {
 
 #back-to-top:hover {
     transform: scale(1.2);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 
 
 /* Bounce animation for text */
 @keyframes bounceText {
-    0%, 100% { transform: translateY(0); opacity: 0.8; }
-    50% { transform: translateY(6px); opacity: 1; }
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translateY(6px);
+        opacity: 1;
+    }
 }
 
 /* Bounce animation for arrow */
 @keyframes bounceArrow {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
 }
 
 
 /* Jiggle animation */
 @keyframes jiggle {
-    0%, 100% { transform: rotate(0deg); }
-    15% { transform: rotate(-5deg); }
-    30% { transform: rotate(5deg); }
-    45% { transform: rotate(-5deg); }
-    60% { transform: rotate(5deg); }
-    75% { transform: rotate(-2deg); }
-    90% { transform: rotate(2deg); }
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(-5deg);
+    }
+
+    30% {
+        transform: rotate(5deg);
+    }
+
+    45% {
+        transform: rotate(-5deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+
+    90% {
+        transform: rotate(2deg);
+    }
 }
 
 
@@ -228,17 +291,20 @@ footer {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 0; /* Behind hero text */
+    z-index: 0;
+    /* Behind hero text */
 }
 
 /* Fade-in for services & gallery */
-.service-list .box, .gallery-grid img {
+.service-list .box,
+.gallery-grid img {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease;
 }
 
-.service-list .box.visible, .gallery-grid img.visible {
+.service-list .box.visible,
+.gallery-grid img.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -247,33 +313,239 @@ footer {
 /* Floating WhatsApp button */
 #floating-whatsapp {
     position: fixed;
-    top: 70px; /* above back-to-top button */
+    top: 70px;
+    /* above back-to-top button */
     right: 25px;
-    background: #25d366; /* WhatsApp green */
+    background: #25d366;
+    /* WhatsApp green */
     color: white;
     padding: 12px 18px;
     border-radius: 50px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-animation: breathe 1s ease-in-out infinite;
+    animation: breathe 1s ease-in-out infinite;
 }
 
 /* Hover effect */
 #floating-whatsapp:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     background: #1ebe57;
 }
 
 /* Breathing (pulse) animation for floating WhatsApp button */
 @keyframes breathe {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }
+
+
+
+
+
+
+
+
+/* ======================
+   FULL MOBILE VERSION 
+   ======================*/
+@media (max-width: 768px) {
+
+    .hero {
+        text-align: center;
+        padding-top: 30%;
+        padding-bottom: 15px;
+        color: white;
+        background: url('assets/images/cover3.png') no-repeat;
+        background-size: cover;
+    }
+
+    .hero h1 {
+        font-size: 22px !important;
+        margin-top: 12px !important;
+        padding: 0 15px !important;
+        line-height: 1.3 !important;
+    }
+
+    .hero p {
+        font-size: 14px !important;
+        padding: 0 15px !important;
+        margin-top: 6px !important;
+    }
+
+    .hero .btn {
+        font-size: 16px !important;
+        padding: 10px 18px !important;
+        margin-top: 10px !important;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    /* ----------------------------------------------
+       GENERAL UI ADJUSTMENTS FOR MOBILE
+       ---------------------------------------------- */
+    header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 999 !important;
+    }
+
+    nav ul {
+        gap: 8px !important;
+    }
+
+}
+
+
+
+/* Extra small phones (under 480px) */
+@media (max-width: 480px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 10px;
+    }
+
+    header nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 13px;
+    }
+
+    .hero {
+        background: url('assets/images/cover3.png') no-repeat center top;
+        background-size: contain;
+    }
+
+
+    .hero h1 {
+        font-size: 16px;
+
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .hero .btn {
+        font-size: 12px;
+        padding: 9px 18px;
+    }
+
+    .hero .typed-text {
+        display: none;
+    }
+
+
+    .scroll-indicator {
+        display: none;
+        /* Looks better hidden on small phones */
+    }
+
+
+    #floating-whatsapp {
+        position: fixed !important;
+        bottom: 5px !important;
+        /* small gap from bottom */
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        /* centers perfectly */
+        top: auto !important;
+        /* Remove top positioning */
+
+        width: 50% !important;
+        /* your preferred width */
+        height: 15px !important;
+        /* 15px was too small for text */
+        border-radius: 10px !important;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        background: #25d366 !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+        z-index: 9999 !important;
+    }
+
+
+    #floating-whatsapp:hover {
+        transform: none;
+        /* No zoom */
+        box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .service-list {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        padding: 0 10px !important;
+    }
+
+    .box {
+        width: 80% !important;
+        padding: 12px !important;
+        border-radius: 10px !important;
+        text-align: center !important;
+    }
+
+    .box img {
+        width: 80% !important;
+        height: 100px !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
+    }
+
+    .box h3 {
+        font-size: 14px !important;
+        margin-top: 6px !important;
+    }
+
+    .box p {
+        font-size: 12px !important;
+        margin-top: 4px !important;
+    }
+
+    /* Gallery: 2 images per row */
+    .gallery-grid {
+        justify-content: center;
+    }
+
+    .gallery-grid img {
+        flex: 0 0 calc(50% - 15px); /* 2 images per row minus gap */
+        max-width: calc(50% - 15px);
+        height: auto; /* maintain aspect ratio */
+        margin-bottom: 15px;
+    }
+    
+
+
+
+}
+
+
+
